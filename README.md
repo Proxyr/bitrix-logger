@@ -1,8 +1,13 @@
 # bitrix-logger — Claude Code Skill
 
+> **A Claude Code skill for structured PHP logging in [1C-Bitrix](https://www.bitrix24.com/) (Bitrix24) projects.**
+> Bitrix24 is a widely used Russian CRM/ERP platform built on PHP. This skill sets up a [Monolog](https://github.com/Seldaek/monolog)-compatible logger with configurable levels (`debug` / `info` / `warning` / `error`) and channel support. Log format: `[2026-03-09 12:00:00] channel.ERROR: message {"key":"value"}`.
+
+---
+
 Claude Code skill для настройки системы логирования по уровням в проектах Bitrix24.
 
-Реализует структурированное логирование PHP-скриптов в стиле [Monolog](https://github.com/Seldaek/monolog): каждая запись содержит дату, уровень (`debug` / `info` / `warning` / `error`), сообщение и контекст. Для модулей поддерживается полный Monolog-формат с каналом: `[2026-03-09T12:00:00+03:00] channel.ERROR: сообщение {"key":"value"}`. Уровни вывода настраиваются — можно логировать всё или только `error`/`warning`.
+Реализует структурированное логирование PHP-скриптов в стиле [Monolog](https://github.com/Seldaek/monolog): каждая запись содержит дату, уровень (`debug` / `info` / `warning` / `error`), сообщение и контекст. Формат записи: `[2026-03-09 12:00:00] channel.ERROR: сообщение {"key":"value"}`. Уровни вывода настраиваются — можно логировать всё или только `error`/`warning`.
 
 ## Что умеет
 
@@ -81,8 +86,8 @@ $logger->error("Исключение", ['message' => $e->getMessage()]);
 | Файл | Лог |
 |------|-----|
 | `ajax/save_fias_address.php` | `ajax_save_fias_address.log` |
-| `components/rrk/company.addresses/class.php` | `company.addresses.log` |
-| `modules/rrk.module/lib/Handlers/MyHandler.php` | `rrk.module_handlers.log` |
+| `components/vendor/company.addresses/class.php` | `company.addresses.log` |
+| `modules/vendor.module/lib/Handlers/MyHandler.php` | `vendor.module_handlers.log` |
 | `php_interface/init.d/12-task-view.php` | `init.d_task-view.log` |
 
 ## Состав пакета
