@@ -1,6 +1,6 @@
 # bitrix-logger — Claude Code Skill
 
-> **A Claude Code skill for structured PHP logging in [1C-Bitrix](https://www.bitrix24.com/) (Bitrix24) projects.**
+> **A Claude Code skill for structured PHP logging in [Bitrix24](https://www.bitrix24.com/) projects.**
 > Bitrix24 is a widely used Russian CRM/ERP platform built on PHP. This skill sets up a [Monolog](https://github.com/Seldaek/monolog)-compatible logger with configurable levels (`debug` / `info` / `warning` / `error`) and channel support. Log format: `[2026-03-09 12:00:00] channel.ERROR: message {"key":"value"}`.
 
 ---
